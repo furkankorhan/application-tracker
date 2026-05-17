@@ -2,39 +2,50 @@
 
 A small browser-based tracker for Ausbildung applications.
 
-The idea is practical: when many applications, links, deadlines and next steps are spread across tabs and notes, it becomes easy to lose control. This project turns the process into a simple table-based workflow.
+When applications, links, deadlines and next actions are spread across tabs and notes, it becomes easy to lose control. This project turns that process into a simple table-based workflow.
 
-## Planned MVP
+## Features
 
-- add, edit and delete application entries
-- track company, role, city, link, status and next action
-- filter by status
-- save data in `localStorage`
-- export data as JSON or CSV
+- Add application entries with company, role, city, link, status and next action
+- Edit or delete existing entries
+- Filter entries by status
+- Save data in `localStorage`
+- Export the current list as JSON or CSV
+- Seed demo data when the app is opened for the first time
 
-## Why This Project
+## Tech Stack
 
-This is a real workflow problem, not a random demo app. It shows that I can take a personal process, define the needed data, and turn it into a small web tool.
+- HTML
+- CSS
+- JavaScript
+- Browser `localStorage`
 
-## What This Repository Should Prove
+No framework and no build step are required.
 
-- basic HTML/CSS/JavaScript structure
-- form handling
-- table rendering
-- local browser storage
-- filtering and simple state management
-- clean documentation of product decisions
+## How to Use
 
-## Status
+Open `index.html` in any browser.
 
-Planning and first implementation phase.
+1. Add a company and role.
+2. Choose the application status.
+3. Write the next concrete action.
+4. Filter the list when the table grows.
+5. Export the data when a backup is needed.
 
-Next step: build the first usable static version with demo data.
+## What This Project Shows
 
-## Future Ideas
+- Basic form handling
+- Table rendering from JavaScript state
+- Local browser persistence
+- Editing and deleting entries
+- Simple status filtering
+- JSON and CSV export
+- Turning a real personal workflow into a small web tool
 
+## Possible Improvements
+
+- Deadline reminders
+- Priority scoring
 - CSV import
-- priority scoring
-- deadline reminders
-- German/English interface
-- application statistics
+- German/English interface switch
+- Search by company, city or role
