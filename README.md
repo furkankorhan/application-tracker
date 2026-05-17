@@ -1,5 +1,7 @@
 # Application Tracker
 
+![Application Tracker preview](assets/preview.svg)
+
 A small browser-based tracker for Ausbildung applications.
 
 When applications, links, deadlines and next actions are spread across tabs and notes, it becomes easy to lose control. This project turns that process into a simple table-based workflow.
