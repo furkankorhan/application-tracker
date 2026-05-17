@@ -4,6 +4,11 @@ A small browser-based tracker for Ausbildung applications.
 
 When applications, links, deadlines and next actions are spread across tabs and notes, it becomes easy to lose control. This project turns that process into a simple table-based workflow.
 
+## Live Demo
+
+- Demo: [furkankorhan.com/application-tracker](https://furkankorhan.com/application-tracker)
+- Code: [github.com/furkankorhan/application-tracker](https://github.com/furkankorhan/application-tracker)
+
 ## Features
 
 - Add application entries with company, role, city, link, status and next action
@@ -41,6 +46,7 @@ Open `index.html` in any browser.
 - Simple status filtering
 - JSON and CSV export
 - Turning a real personal workflow into a small web tool
+- Building a tool around a real application process instead of only making a generic example app
 
 ## Possible Improvements
 
