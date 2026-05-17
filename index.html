@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Application Tracker</title>
+  <meta name="description" content="A small browser-based tracker for Ausbildung applications." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Ausbildung workflow</p>
+        <h1>Application Tracker</h1>
+        <p class="intro">Track companies, links, status and the next concrete action without losing everything in browser tabs.</p>
+      </div>
+      <div class="summary" aria-label="Application summary">
+        <span id="total-count">0</span>
+        <small>entries</small>
+      </div>
+    </header>
+
+    <section class="panel" aria-labelledby="form-title">
+      <div class="panel-head">
+        <h2 id="form-title">Add or edit an application</h2>
+        <button id="reset-demo" class="ghost" type="button">Reset demo data</button>
+      </div>
+
+      <form id="application-form" class="grid-form">
+        <input type="hidden" id="entry-id" />
+        <label>Company<input id="company" type="text" placeholder="Example GmbH" required /></label>
+        <label>Role<input id="role" type="text" placeholder="Fachinformatiker/in" required /></label>
+        <label>City<input id="city" type="text" placeholder="Hannover" /></label>
+        <label>Link<input id="link" type="url" placeholder="https://..." /></label>
+        <label>Status
+          <select id="status">
+            <option value="research">Research</option>
+            <option value="ready">Ready</option>
+            <option value="applied">Applied</option>
+            <option value="interview">Interview</option>
+            <option value="rejected">Rejected</option>
+          </select>
+        </label>
+        <label>Next action<input id="next-action" type="text" placeholder="Check documents, send application..." /></label>
+        <div class="form-actions">
+          <button type="submit">Save entry</button>
+          <button id="cancel-edit" class="ghost" type="button">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="table-title">
+      <div class="panel-head table-controls">
+        <h2 id="table-title">Applications</h2>
+        <div class="actions">
+          <select id="status-filter" aria-label="Filter by status">
+            <option value="all">All statuses</option>
+            <option value="research">Research</option>
+            <option value="ready">Ready</option>
+            <option value="applied">Applied</option>
+            <option value="interview">Interview</option>
+            <option value="rejected">Rejected</option>
+          </select>
+          <button id="export-json" class="ghost" type="button">Export JSON</button>
+          <button id="export-csv" class="ghost" type="button">Export CSV</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Company</th><th>Role</th><th>City</th><th>Status</th><th>Next action</th><th>Link</th><th></th></tr></thead>
+          <tbody id="application-list"></tbody>
+        </table>
+      </div>
+      <p id="empty-state" class="empty" hidden>No applications match this filter.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
